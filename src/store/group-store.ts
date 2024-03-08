@@ -3,6 +3,7 @@ import { Group } from '../types';
 
 export class GroupStore {
   groups: Group[] = [];
+  isLoading: boolean = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -10,5 +11,9 @@ export class GroupStore {
 
   setGroups(value: Group[]) {
     this.groups = value;
+  }
+
+  setIsLoading(value: boolean) {
+    this.isLoading = value;
   }
 }
