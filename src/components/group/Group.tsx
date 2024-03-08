@@ -1,6 +1,7 @@
-import { Group } from '../../types';
+import { Friends } from '../friends';
+import { GroupProps } from './types';
 
-export const GroupItem = (props: Group) => {
+export const GroupItem = (props: GroupProps) => {
   const avatarColor = props.avatar_color ?? 'grey';
 
   return (
@@ -15,9 +16,10 @@ export const GroupItem = (props: Group) => {
         </span>
         <p>Подписчики: {props.members_count}</p>
         {props.friends && (
-          <p>
-            Друзья: <span className='group__friends'>{props.friends.length}</span>
-          </p>
+          <Friends
+            friendsCount={props.friends.length}
+            friends={props.friends}
+          />
         )}
       </div>
     </div>

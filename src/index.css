@@ -390,6 +390,11 @@ body {
   opacity: 0.7;
 }
 
-.group__friends{
+.friends__header {
   cursor: pointer;
+}
+
+.friends__body {
+  padding-left: 10px;
+  border-left: 2px solid dodgerblue;
 }
