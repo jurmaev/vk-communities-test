@@ -1,8 +1,6 @@
 import { Filter, Group } from '../types';
 
 export function filterGroups(groups: Group[], filters: Filter): Group[] {
-  console.log(groups)
-  
   if (filters.privacy) {
     groups = groups.filter(
       (group) => group.closed === (filters.privacy === 'closed')
