@@ -4,9 +4,11 @@ import { GroupProps } from './types';
 export const GroupItem = (props: GroupProps) => {
   return (
     <div className='group'>
-      <div
-        className='group__icon'
-        style={{ backgroundColor: props.avatar_color }}></div>
+      {props.avatar_color && (
+        <div
+          className='group__icon'
+          style={{ backgroundColor: props.avatar_color }}></div>
+      )}
       <div>
         <span className='group__name'>{props.name}</span>
         <span className='group__state'>
